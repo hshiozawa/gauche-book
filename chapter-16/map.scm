@@ -26,6 +26,19 @@
 (hash-table-for-each table (cut print <> ":" <>))
 (hash-table-map table (cut cons <> <>))
 
+(define table (make-tree-map = <))
+(tree-map-put! table 1 10)
+(tree-map-put! table 2 20)
+(tree-map-get table 1)
+(tree-map-get table 2)
+
+(tree-map-min table)
+(tree-map-max table)
+
+(tree-map-pop-min! table)
+(tree-map-pop-max! table)
+
+
 
 
 
